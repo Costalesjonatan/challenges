@@ -1,9 +1,7 @@
 package org.app;
 
 import lombok.NoArgsConstructor;
-import lombok.extern.java.Log;
 
-@Log
 @NoArgsConstructor
 public class FizzBuzz {
     public String execute(int limit) {
