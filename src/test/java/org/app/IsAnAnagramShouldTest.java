@@ -64,6 +64,22 @@ class IsAnAnagramShouldTest {
         thenTrueIsReturned();
     }
 
+    @Test
+    void returnFalseIfBothWordLengthsIsZero() {
+        giveMeIsAnAnagram();
+        giveMeReturnedException();
+        whenExecuteWithBothWordLengthsIsZero();
+        thenFalseIsReturned();
+    }
+
+    private void whenExecuteWithBothWordLengthsIsZero() {
+        try {
+            returnedResult = isAnAnagram.execute("", "");
+        } catch (Exception exception) {
+            returnedException = exception;
+        }
+    }
+
     private void whenExecuteWithWordsAreAnagrams() {
         try {
             returnedResult = isAnAnagram.execute("anagram", "margana");
